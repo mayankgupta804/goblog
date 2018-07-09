@@ -43,8 +43,9 @@ func (bc *BoltClient) Seed() {
 }
 
 func (bc *BoltClient) initializeBucket() error {
+	panic("Not implemented")
 }
 
 func (bc *BoltClient) seedAccounts() {
-
+	panic("Not implemented")
 }
