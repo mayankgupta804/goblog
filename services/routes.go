@@ -1,6 +1,10 @@
 package services
 
-import "net/http"
+import (
+	"net/http"
+
+	"github.com/go_microservices/goblog/accountservice/service"
+)
 
 // Route contains information about the name of the route, an HTTP method and a pattern the function
 // will execute when this route is called
@@ -20,9 +24,6 @@ var routes = Routes{
 		"GetAccount",
 		"GET",
 		"/accounts/{accountId}",
-		func(w http.ResponseWriter, r *http.Request) {
-			w.Header().Set("Content-Type", "application/json; charset=utf-8")
-			w.Write([]byte("{\"result\":\"ok\"}"))
-		},
+		service.GetAccount,
 	},
 }
