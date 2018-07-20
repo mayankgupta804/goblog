@@ -52,7 +52,7 @@ func (bc *BoltClient) seedAccounts() {
 
 		acc := model.Account{
 			Id:   key,
-			Name: "Person" + strconv.Itoa(i),
+			Name: "Person_" + strconv.Itoa(i),
 		}
 		jsonBytes, _ := json.Marshal(acc)
 
